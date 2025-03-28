@@ -1,17 +1,17 @@
 services:
-   vendor-portal:
+  vendor-portal:
     image:  kjosipovic/selenium
     environment:
-      - BROWSER=chrome
+      - BROWSER
       - HUB_HOST=hub
       - THREAD_COUNT=3
       - TEST_SUITE=vendor-portal.xml
     volumes:
       - ./output/vendor-portal:/home/selenium-docker/test-output
-   flight-reservation:
+  flight-reservation:
     image:  kjosipovic/selenium
     environment:
-      - BROWSER=chrome
+      - BROWSER
       - HUB_HOST=hub
       - THREAD_COUNT=3
       - TEST_SUITE=flight-reservation.xml
